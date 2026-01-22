@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FH Wedel – Kursmaterialien | Dennis Proppe</title>
+    <meta
+      name="description"
+      content="Statische Kursmaterialien, Downloads und Links für Studierende (FH Wedel) – bereitgestellt von Dennis Proppe."
+    />
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #0b1020;
+        --card: rgba(255, 255, 255, 0.06);
+        --text: rgba(255, 255, 255, 0.92);
+        --muted: rgba(255, 255, 255, 0.72);
+        --border: rgba(255, 255, 255, 0.14);
+        --accent: #7dd3fc;
+      }
+      @media (prefers-color-scheme: light) {
+        :root {
+          --bg: #f6f7fb;
+          --card: rgba(17, 24, 39, 0.04);
+          --text: rgba(17, 24, 39, 0.92);
+          --muted: rgba(17, 24, 39, 0.72);
+          --border: rgba(17, 24, 39, 0.14);
+          --accent: #0369a1;
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+          Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        background: radial-gradient(
+            1200px 600px at 20% -10%,
+            rgba(125, 211, 252, 0.22),
+            transparent 60%
+          ),
+          radial-gradient(
+            1200px 600px at 90% 10%,
+            rgba(167, 139, 250, 0.18),
+            transparent 55%
+          ),
+          var(--bg);
+        color: var(--text);
+        line-height: 1.5;
+      }
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+      a:hover,
+      a:focus-visible {
+        text-decoration: underline;
+      }
+      .wrap {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 28px 16px 56px;
+      }
+      header {
+        padding: 24px 0 18px;
+      }
+      .title {
+        font-size: clamp(24px, 4vw, 36px);
+        letter-spacing: -0.02em;
+        margin: 0 0 6px;
+      }
+      .subtitle {
+        margin: 0;
+        color: var(--muted);
+        max-width: 70ch;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 14px;
+        margin-top: 18px;
+      }
+      .card {
+        grid-column: span 12;
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 16px;
+        backdrop-filter: blur(8px);
+      }
+      @media (min-width: 860px) {
+        .card.half {
+          grid-column: span 6;
+        }
+        .card.third {
+          grid-column: span 4;
+        }
+      }
+      h2 {
+        font-size: 16px;
+        margin: 0 0 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--muted);
+      }
+      ul {
+        margin: 0;
+        padding-left: 18px;
+      }
+      li {
+        margin: 8px 0;
+      }
+      .pillbar {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 12px;
+      }
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 12px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--text);
+      }
+      .footer {
+        margin-top: 18px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+      code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+          "Liberation Mono", "Courier New", monospace;
+        font-size: 0.95em;
+      }
+      .empty {
+        color: var(--muted);
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <h1 class="title">Kursmaterialien</h1>
+        <p class="subtitle">
+          Statische Downloads und Links für Studierende der Fachhochschule Wedel
+          – bereitgestellt von Dennis Proppe.
+        </p>
+        <div class="pillbar" aria-label="Schnelllinks">
+          <a
+            class="pill"
+            href="https://www.fh-wedel.de/wir/organisation/team/detail/profil/profile/show/Dennis-Proppe/"
+            rel="noopener noreferrer"
+            target="_blank"
+            >Profil (FH Wedel)</a
+          >
+          <a class="pill" href="README.md">Repository-Info</a>
+        </div>
+      </header>
+
+      <main class="grid">
+        <section class="card half" aria-labelledby="downloads">
+          <h2 id="downloads">Downloads</h2>
+          <ul>
+            <li><a href="files/handout.pdf">Handout (PDF)</a></li>
+          </ul>
+          <p class="empty">
+            Lege weitere Dateien unter <code>files/</code> ab und ergänze hier
+            die Links.
+          </p>
+          <!-- Beispiel:
+          <ul>
+            <li><a href="files/aufgabenblatt-01.pdf">Aufgabenblatt 01</a></li>
+            <li><a href="files/beispielcode.zip">Beispielcode (ZIP)</a></li>
+          </ul>
+          -->
+        </section>
+
+        <section class="card half" aria-labelledby="links">
+          <h2 id="links">Links</h2>
+          <ul>
+            <li>
+              <a
+                href="https://www.fh-wedel.de/"
+                rel="noopener noreferrer"
+                target="_blank"
+                >Fachhochschule Wedel</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.fh-wedel.de/wir/organisation/team/"
+                rel="noopener noreferrer"
+                target="_blank"
+                >Team &amp; Kontakt</a
+              >
+            </li>
+          </ul>
+          <!-- Ergänze kurs-spezifische Links hier (Moodle, GitHub, Discord, etc.). -->
+        </section>
+
+        <section class="card third" aria-labelledby="kurse">
+          <h2 id="kurse">Kurse</h2>
+          <p class="empty">
+            Optional: Lege pro Kurs einen Ordner an (z.B. <code>web/</code>,
+            <code>se/</code>) und verlinke auf die jeweiligen Unterseiten.
+          </p>
+        </section>
+
+        <section class="card third" aria-labelledby="hinweise">
+          <h2 id="hinweise">Hinweise</h2>
+          <ul>
+            <li>Keine Anmeldung erforderlich</li>
+            <li>Materialien sind statisch gehostet</li>
+            <li>Links möglichst sprechend benennen</li>
+          </ul>
+        </section>
+
+        <section class="card third" aria-labelledby="kontakt">
+          <h2 id="kontakt">Kontakt</h2>
+          <p class="empty">
+            Kontakt siehe FH-Wedel-Profil. (Falls du eine E-Mail-Adresse hier
+            ergänzen willst, am besten spam-sicher.)
+          </p>
+        </section>
+      </main>
+
+      <p class="footer">
+        Tipp: Für GitHub Pages reicht eine <code>index.html</code> im Repository
+        Root. Ordner und Dateien können einfach mit relativem Pfad verlinkt
+        werden.
+      </p>
+    </div>
+  </body>
+</html>
